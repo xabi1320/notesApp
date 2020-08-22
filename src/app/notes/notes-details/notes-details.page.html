@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-toolbar color="secondary">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/notes"></ion-back-button>
+        </ion-buttons>
+        <ion-title> {{ note.title }}</ion-title>
+        <ion-buttons slot="end">
+            <ion-button (click)="deleteNote()">
+                <ion-icon name="trash"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <span>{{ note.date }}</span>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <h2 class="ion-text-center">{{ note.description }}</h2>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
